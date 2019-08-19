@@ -12,7 +12,7 @@ public class ControllerAdvice {
     @ExceptionHandler(Exception.class)
     public CommonResult handleException(Exception e) {
         log.error(e.getMessage());
-        return CommonResult.errorResult(-1, "系统繁忙，请稍候再试");
+        return CommonResult.errorResult(CommonResult.FAIL, CommonResult.FAIL_MSG);
     }
 
     @ExceptionHandler(BizException.class)
