@@ -45,4 +45,8 @@ public class CommonResult<T> {
     public static <T> CommonResult<T> errorResult(int errorCode, String errorMsg) {
         return new CommonResult(errorCode, errorMsg, null);
     }
+
+    public static <E> CommonResult<E> fail(String msg) {
+        return new CommonResult(FAIL, msg, null);
+    }
 }
