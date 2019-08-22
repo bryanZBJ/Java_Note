@@ -15,9 +15,6 @@ public class ControllerAdvice {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR) //这就是返回的httpStatus的状态 这个是500
     //@ResponseStatus(HttpStatus.OK) 这个是200
     public CommonResult handleException(Exception e) {
-        if (e instanceof BizException) {
-            
-        }
         log.error(e.getMessage());
         return CommonResult.errorResult(CommonResult.FAIL, CommonResult.FAIL_MSG);
     }
