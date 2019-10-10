@@ -18,6 +18,7 @@ public class HelloController {
 
     @GetMapping(value = "/test")
     public String testBizException() {
+		
         return helloService.testBiz();
     }
 
